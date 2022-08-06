@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
+import { Hero } from "components";
+
 const Home: NextPage = () => {
   return (
     <div>
@@ -8,8 +10,8 @@ const Home: NextPage = () => {
         <title>Arya and Sidharth</title>
       </Head>
 
-      <main>
-        <h1>Arya & Sidharth</h1>
+      <main className="prose">
+        <Hero />
       </main>
     </div>
   );
