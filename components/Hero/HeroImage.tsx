@@ -1,4 +1,5 @@
-import { ReactNode, useEffect, useRef } from "react";
+import { ReactNode } from "react";
+import { Player } from "@lottiefiles/react-lottie-player";
 import Image from "next/image";
 import image from "./hero-image.jpg";
 
@@ -7,18 +8,12 @@ const Container = ({ children }: { children: ReactNode }) => (
 );
 
 export const HeroImage = () => {
-  const ref = useRef(null);
-  useEffect(() => {
-    import("@lottiefiles/lottie-player");
-  });
   return (
     <Container>
       <div className="w-full">
-        <lottie-player
+        <Player
           autoplay
           loop
-          mode="normal"
-          ref={ref}
           src="https://assets6.lottiefiles.com/private_files/lf30_eizw7mli.json"
         />
       </div>
